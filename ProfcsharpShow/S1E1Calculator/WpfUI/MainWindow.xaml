@@ -1,0 +1,94 @@
+﻿<Window x:Class="WpfUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+  
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="Background" Value="AntiqueWhite" />
+            <Setter Property="FontFamily" Value="Segoe Black" />
+            <Setter Property="Foreground" Value="Navy" />
+            <Setter Property="FontStretch" Value="UltraExpanded" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="FontWeight" Value="UltraBold" />
+            <Setter Property="FontFamily" Value="Segoe" />
+            <Setter Property="LineHeight" Value="Auto"/>
+            <Setter Property="Padding" Value="20,20"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="Aquamarine" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="Foreground" Value="BlueViolet" />
+            <Setter Property="FontStyle" Value="Italic" />
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="33"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="2"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="Margin" Value="5"/>
+            <Style.Triggers>
+                <Trigger Property="Button.IsPressed" Value="True">
+                    <Setter Property="Control.Foreground" Value="Blue"/>
+                    <Setter Property="Control.FontSize" Value="55"/>
+                    <Setter Property="Control.FontWeight" Value="UltraBold"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>    
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="FirstNumber"
+                   Grid.Row="0" 
+                   Grid.Column="0"/>
+
+        <TextBox x:Name = "tbFirstNumber"
+                 Grid.Row="1" 
+                 Grid.Column="0"/>
+
+        <TextBlock Text="SecondNumber"
+                   Grid.Row="2" 
+                   Grid.Column="0"/>
+
+        <TextBlock Grid.Row="4"
+                   Grid.Column="0" 
+                   Text="Result"/>
+
+        <TextBox x:Name="tbSecondNumber"
+                 Grid.Row="3" 
+                 Grid.Column="0"/>
+
+        <TextBox x:Name="tbResult"
+                 Grid.Row="5" 
+                 Grid.Column="0"/>
+
+        <Button x:Name="btnResult"
+                Content="Click"
+                Grid.Row="0" 
+                Grid.Column="1"
+                Grid.RowSpan="6"
+                />
+    </Grid>    
+</Window>

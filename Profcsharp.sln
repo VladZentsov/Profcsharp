@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProfcsharpShow", "ProfcsharpShow", "{7B9DD448-0170-44AD-8D5F-97DA045C6A6E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "S1E1Calculator", "S1E1Calculator", "{75C2AADC-3F09-4DAD-93A7-B90C23F4CD68}"
+	ProjectSection(SolutionItems) = preProject
+		ProfcsharpShow\S1E1Calculator\task.txt = ProfcsharpShow\S1E1Calculator\task.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatorCore", "ProfcsharpShow\S1E1Calculator\CalculatorCore\CalculatorCore.csproj", "{F67C315B-246B-4998-966A-3ED7366834F7}"
 EndProject

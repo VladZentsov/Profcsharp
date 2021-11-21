@@ -11,7 +11,7 @@ namespace CalculatorCore.Controllers
         public LoggerController(BaseController controller, ILog log = null)
         {
             bc = controller;
-            this.log = new VoluntaryLog(log);
+            this.log = log;
         }
 
         public override void ButtonClick()
